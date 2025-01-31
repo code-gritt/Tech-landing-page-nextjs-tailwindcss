@@ -21,7 +21,7 @@ const Hero = () => {
     <Wrapper className="pt-20 lg:pt-32 relative min-h-screen w-full h-full flex-1">
       <div className="flex flex-col lg:flex-row w-full h-full lg:gap-16">
         <div className="flex flex-col items-start gap-10 py-8 w-full">
-          <div className="flex flex-col items-start gap-4">
+          <div className="flex flex-col max-w-xl items-start gap-4">
             <AnimationContainer animation="fadeUp" delay={0.2}>
               <SectionBadge title="Trusted by 10,000+ Users" />
             </AnimationContainer>
@@ -43,7 +43,7 @@ const Hero = () => {
           <AnimationContainer animation="fadeUp" delay={0.8}>
             <div className="w-full">
               <Link href="/">
-                <Button className="w-full md:w-auto">Start free trial</Button>
+                <Button className="w-full md:w-auto">Schedule A Demo</Button>
               </Link>
             </div>
           </AnimationContainer>
