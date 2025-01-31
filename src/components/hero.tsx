@@ -27,16 +27,15 @@ const Hero = () => {
             </AnimationContainer>
 
             <AnimationContainer animation="fadeUp" delay={0.4}>
-              <h1 className="text-5xl lg:text-6xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-r from-foreground to-neutral-500">
-                Effortless Real Estate Trading
+              <h1 className="text-5xl lg:text-6xl font-medium !leading-tight text-black">
+                Build Your Intelligent AI Workforce with Navan AI
               </h1>
             </AnimationContainer>
 
             <AnimationContainer animation="fadeUp" delay={0.6}>
               <p className="text-sm md:text-base lg:text-lg text-muted-foreground">
-                Simplify your property journey with our comprehensive platform.
-                Buy, sell, or manage properties with ease using our innovative
-                tools and expert guidance.
+                With Navan AI, let your eCommerce business scale with the power
+                of Generative AI and Automation
               </p>
             </AnimationContainer>
           </div>
@@ -76,35 +75,17 @@ const Hero = () => {
 
         <AnimationContainer animation="fadeRight" delay={0.4}>
           <div className="flex flex-col items-start justify-start w-full h-min relative overflow-visible">
-            <div className="lg:aspect-[1.3884514435695539/1] w-full lg:w-[1000px] lg:h-[auto,720px] relative">
-              <div className="pointer-events-none hidden lg:block absolute inset-y-0 right-1/4 w-1/3 h-full bg-gradient-to-l from-background z-50"></div>
-              <div className="lg:absolute lg:inset-0">
-                <Image
-                  src="/images/dashboard.png"
-                  alt="hero"
-                  sizes="1000px"
-                  width={1024}
-                  height={1024}
-                  className="object-contain min-w-full h-auto rounded-xl lg:rounded-2xl"
-                />
-              </div>
-            </div>
+            <Image
+              src="/images/ai_agents_hero_bg.webp"
+              alt="hero"
+              sizes="1000px"
+              width={641}
+              height={578}
+              className="object-contain min-w-full h-auto rounded-xl lg:rounded-2xl"
+            />
           </div>
         </AnimationContainer>
       </div>
-      <AnimationContainer
-        animation="scaleUp"
-        delay={1.2}
-        className="absolute w-2/3 h-auto -top-[8%] left-1/4 -z-10"
-      >
-        <Image
-          src="/images/hero-gradient.svg"
-          alt="hero"
-          width={1024}
-          height={1024}
-          className="object-cover w-full h-auto"
-        />
-      </AnimationContainer>
     </Wrapper>
   );
 };

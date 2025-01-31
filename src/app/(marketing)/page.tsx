@@ -1,3 +1,5 @@
+"use client";
+
 import CTA from "@/components/cta";
 import FAQ from "@/components/faq";
 import Features from "@/components/features";
@@ -7,8 +9,10 @@ import Perks from "@/components/perks";
 import PlatformMetrics from "@/components/platform-metrics";
 import Pricing from "@/components/pricing";
 import Testimonials from "@/components/testimonials";
+import useLenis from "@/hooks/useLenis";
 
 const HomePage = () => {
+  useLenis();
   return (
     <div className="w-full relative flex flex-col">
       <section className="w-full">
