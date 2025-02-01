@@ -14,6 +14,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <title>navan.ai</title>
+        <meta name="theme-color" content="#ffffff" />
+      </head>
       <body
         className={cn(
           "min-h-screen bg-[#ffffff] text-foreground font-base antialiased overflow-x-hidden dark",

@@ -37,14 +37,6 @@ const Footer = () => {
   return (
     <footer className="relative border-t border-border pt-16 pb-8 md:pb-0 w-full overflow-hidden">
       <Wrapper className="">
-        <AnimationContainer animation="scaleUp" delay={0.2}>
-          <div className="absolute -top-1/8 lg:-top-1/2 inset-x-0 mx-auto bg-primary/50 lg:bg-primary/70 rounded-full w-1/2 h-1/4 blur-[6rem] lg:blur-[12rem]"></div>
-        </AnimationContainer>
-
-        <AnimationContainer animation="scaleUp" delay={0.3}>
-          <div className="absolute top-0 w-4/5 mx-auto inset-x-0 h-px bg-gradient-to-r from-primary/0 via-primary/80 to-primary/0"></div>
-        </AnimationContainer>
-
         <div className="grid gap-8 xl:grid-cols-3 xl:gap-8">
           <AnimationContainer animation="fadeRight" delay={0.4}>
             <div className="flex flex-col items-start justify-start md:max-w-[300px]">
@@ -55,17 +47,15 @@ const Footer = () => {
                   width={32}
                   height={32}
                 />
-                <span className="text-lg lg:text-xl font-medium">PropEase</span>
+
+                <span className="text-lg lg:text-xl font-medium">Navan AI</span>
               </div>
               <p className="text-muted-foreground mt-4 text-sm">
-                123 Pine Avenue, Suite 500
+                Singapore 059817.
                 <br />
-                New York, NY 10001
+                Singapore: 6 Eu Tong Sen Street #09-10 · The Central ·
               </p>
-              <div className="mt-4 text-sm text-muted-foreground">
-                <p>support@propease.com</p>
-                <p>+1 (123) 456-7890</p>
-              </div>
+
               <div className="flex items-center gap-4 mt-6">
                 {SOCIAL_LINKS.map((social, index) => (
                   <AnimationContainer
@@ -165,7 +155,7 @@ const Footer = () => {
         <AnimationContainer animation="fadeUp" delay={1}>
           <div className="mt-16 border-t border-border/40 py-8 flex flex-col md:flex-row items-center justify-center">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} PropEase. All rights reserved.
+              Copyright © 2025 Navan AI Pte Ltd.
             </p>
           </div>
         </AnimationContainer>

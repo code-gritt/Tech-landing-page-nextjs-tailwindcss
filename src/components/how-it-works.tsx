@@ -15,13 +15,13 @@ const HowItWorks = () => {
         </AnimationContainer>
 
         <AnimationContainer animation="fadeUp" delay={0.3}>
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-b from-foreground to-neutral-400">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-medium text-black">
             Three steps to success
           </h1>
         </AnimationContainer>
 
         <AnimationContainer animation="fadeUp" delay={0.4}>
-          <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-lg mx-auto">
+          <p className="text-sm md:text-base lg:text-xl bgtext max-w-lg mx-auto">
             Our three-step process simplifies real estate transactions and
             property management.
           </p>
@@ -39,8 +39,8 @@ const HowItWorks = () => {
               className={cn(
                 "flex flex-col items-start gap-4 bg-gradient-to-b rounded-lg lg:rounded-2xl p-4 lg:p-8",
                 index % 2 === 0
-                  ? "from-neutral-900 to-transparent"
-                  : "from-transparent to-neutral-900"
+                  ? "from-neutral-300 to-transparent"
+                  : "from-transparent to-neutral-300"
               )}
             >
               <div className="flex items-center gap-x-4">
@@ -49,12 +49,12 @@ const HowItWorks = () => {
                   delay={0.7 + index * 0.2}
                 >
                   <div className="size-10 rounded-full bg-gradient-to-b from-primary to-orange-400 flex items-center justify-center">
-                    <span className="text-lg font-medium text-white">
+                    <span className="text-lg font-medium text-black">
                       {index + 1}
                     </span>
                   </div>
                 </AnimationContainer>
-                <h3 className="text-lg font-medium">{item.title}</h3>
+                <h3 className="text-lg font-medium text-black">{item.title}</h3>
               </div>
               <div className="space-y-4 w-full">
                 <AnimationContainer
@@ -73,7 +73,7 @@ const HowItWorks = () => {
                   animation="fadeUp"
                   delay={1.1 + index * 0.2}
                 >
-                  <p className="text-sm md:text-base text-muted-foreground">
+                  <p className="text-sm md:text-base text-black">
                     {item.description}
                   </p>
                 </AnimationContainer>

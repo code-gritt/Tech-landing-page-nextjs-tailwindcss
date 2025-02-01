@@ -93,3 +93,18 @@ image {
   user-select: none;
   pointer-events: none;
 }
+
+.dropdown-item {
+  font-size: 0.875rem;
+}
+
+.bgtext {
+  background: linear-gradient(180deg, #2f80ec, #1addf9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bigTextButton {
+  background: linear-gradient(180deg, #2f80ec, #1addf9);
+}

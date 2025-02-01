@@ -14,7 +14,7 @@ const Perks = () => {
         </AnimationContainer>
 
         <AnimationContainer animation="fadeUp" delay={0.3}>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium !leading-tight text-transparent bg-clip-text bg-gradient-to-b from-foreground to-neutral-400">
+          <h2 className="text-2xl md:text-4xl lg:text-6xl font-medium text-black">
             Use our platform
             <br />
             with powerful tools
@@ -22,7 +22,7 @@ const Perks = () => {
         </AnimationContainer>
 
         <AnimationContainer animation="fadeUp" delay={0.4}>
-          <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl md:text-xl lg:text-3xl bgtext max-w-2xl mx-auto">
             Seamlessly integrated tools for effortless property management.
           </p>
         </AnimationContainer>
@@ -65,10 +65,10 @@ const Perks = () => {
                     />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-lg md:text-xl font-medium">
+                    <h3 className="text-xl md:text-xl font-medium">
                       {perk.title}
                     </h3>
-                    <p className="text-xs md:text-sm text-muted-foreground max-w-[250px]">
+                    <p className="text-xl md:text-sm text-black max-w-[250px]">
                       {perk.description}
                     </p>
                   </div>

@@ -17,11 +17,14 @@ import AnimationContainer from "./global/animation-container";
 import Icons from "./global/icons";
 import Wrapper from "./global/wrapper";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const Navbar = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState<boolean>(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [isHoveringProducts, setIsHoveringProducts] = useState(false);
 
   const mobileMenuRef = useClickOutside(() => {
     if (open) setOpen(false);
@@ -59,7 +62,7 @@ const Navbar = () => {
         className={cn(
           "hidden lg:flex bg-transparent self-start items-center justify-between py-4 rounded-full relative z-[50] mx-auto w-full backdrop-blur",
           visible &&
-            "bg-background/60 py-2 border border-t-foreground/20 border-b-foreground/10 border-x-foreground/15 w-full"
+            "bg-background/60 py-4 border border-t-foreground/20 border-b-foreground/10 border-x-foreground/15 w-full"
         )}
       >
         <Wrapper className="flex items-center justify-between lg:px-4">
@@ -69,11 +72,18 @@ const Navbar = () => {
             transition={{ duration: 0.2 }}
           >
             <Link href="/" className="flex items-center gap-2">
-              <Icons.logo className="w-max h-6 -mt-1" />
+              {/* <Icons.logo  /> */}
+              <Image
+                src="/images/navan.png"
+                width={200}
+                height={200}
+                alt="hero"
+                className="w-max h-6 -mt-1"
+              />
             </Link>
           </motion.div>
 
-          <div className="hidden lg:flex flex-row flex-1 absolute inset-0 items-center justify-center w-max mx-auto gap-x-2 text-sm text-muted-foreground font-medium">
+          <div className="hidden lg:flex flex-row flex-1 absolute inset-0 items-center justify-center w-max mx-auto gap-x-2 text-lg text-white font-medium">
             <AnimatePresence>
               {NAV_LINKS.map((link, index) => (
                 <AnimationContainer
@@ -81,13 +91,54 @@ const Navbar = () => {
                   animation="fadeDown"
                   delay={0.1 * index}
                 >
-                  <div className="relative">
+                  <div
+                    className="relative"
+                    onMouseEnter={() => {
+                      if (link.name === "Products") {
+                        setIsHoveringProducts(true);
+                        setDropdownOpen(true);
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      if (link.name === "Products") {
+                        setIsHoveringProducts(false);
+                        // Only close if not hovering over dropdown
+                        if (!dropdownOpen) {
+                          setDropdownOpen(false);
+                        }
+                      }
+                    }}
+                  >
                     <Link
                       href={link.link}
-                      className="hover:text-foreground transition-all duration-500 hover:bg-accent rounded-md px-4 py-2"
+                      className="hover:text-foreground transition-all duration-500 rounded-md px-4 py-1"
                     >
                       {link.name}
                     </Link>
+                    {link.dropdown && dropdownOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute left-0 mt-2 min-w-72 bg-neutral-950 rounded-md shadow-lg z-50"
+                        onMouseEnter={() => setIsHoveringProducts(true)}
+                        onMouseLeave={() => {
+                          setIsHoveringProducts(false);
+                          setDropdownOpen(false);
+                        }}
+                      >
+                        {link.dropdown.map((dropdownItem, idx) => (
+                          <Link
+                            key={idx}
+                            href={dropdownItem.link}
+                            className="block px-4 py-1 text-neutral-300 hover:bg-neutral-800 rounded-md dropdown-item"
+                          >
+                            {dropdownItem.name}
+                          </Link>
+                        ))}
+                      </motion.div>
+                    )}
                   </div>
                 </AnimationContainer>
               ))}
