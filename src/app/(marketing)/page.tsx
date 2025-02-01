@@ -19,6 +19,7 @@ import { StaticImageData } from "next/image";
 import { ColourfulText } from "@/components/ui/colourful-text";
 import { motion } from "framer-motion";
 import { WorldMapDemo } from "@/components/WorldMapDemo";
+import { AppleCardsCarouselDemo } from "@/components/AppleCardsCarouselDemo";
 
 type Product = {
   title: string;
@@ -151,6 +152,10 @@ const HomePage = () => {
       </section>
       <section className="w-full">
         <Perks />
+      </section>
+
+      <section className="w-full">
+        <AppleCardsCarouselDemo />
       </section>
 
       <section className="w-full">
