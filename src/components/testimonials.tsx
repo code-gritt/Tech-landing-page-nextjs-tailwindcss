@@ -70,7 +70,7 @@ const Testimonials = () => {
                       delay={0.8 + index * 0.1}
                     >
                       <p className="text-lg text-black">
-                        "{testimonial.content}"
+                        &quot;{testimonial.content}&quot;
                       </p>
                     </AnimationContainer>
 

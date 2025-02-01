@@ -1,22 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimationContainer from "./global/animation-container";
-import Images from "./global/images";
 import Wrapper from "./global/wrapper";
 import { Button } from "./ui/button";
-import Marquee from "./ui/marquee";
 import SectionBadge from "./ui/section-badge";
 
 const Hero = () => {
-  const companies = [
-    Images.comp1,
-    Images.comp2,
-    Images.comp3,
-    Images.comp4,
-    Images.comp5,
-    Images.comp6,
-  ];
-
   return (
     <Wrapper className="pt-20 lg:pt-32 relative min-h-screen w-full h-full flex-1">
       <div className="absolute inset-0 z-0">

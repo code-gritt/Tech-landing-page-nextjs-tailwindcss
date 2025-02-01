@@ -4,7 +4,6 @@ import Link from "next/link";
 import AnimationContainer from "./global/animation-container";
 import Wrapper from "./global/wrapper";
 import { Button } from "./ui/button";
-import { FlickeringGrid } from "./ui/flickering-grid";
 import SectionBadge from "./ui/section-badge";
 
 const HIGHLIGHTS = [

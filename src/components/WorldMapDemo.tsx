@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "motion/react";
 import { WorldMap } from "./ui/world-map";
 import { SignupFormDemo } from "./SignupFormDemo";
 

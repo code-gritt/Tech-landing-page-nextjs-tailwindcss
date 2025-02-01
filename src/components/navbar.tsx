@@ -19,12 +19,18 @@ import Wrapper from "./global/wrapper";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
+type NavItem = {
+  name: string;
+  link: string;
+  dropdown?: { name: string; link: string }[]; // Optional dropdown items
+};
+
 const Navbar = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [open, setOpen] = useState(false);
   const [visible, setVisible] = useState<boolean>(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [isHoveringProducts, setIsHoveringProducts] = useState(false);
+  const [, setIsHoveringProducts] = useState(false);
 
   const mobileMenuRef = useClickOutside(() => {
     if (open) setOpen(false);
@@ -207,7 +213,7 @@ const Navbar = () => {
               exit={{ opacity: 0 }}
               className="flex rounded-b-xl absolute top-16 bg-neutral-950 inset-x-0 z-50 flex-col items-start justify-start gap-2 w-full px-4 py-8 shadow-xl shadow-neutral-950"
             >
-              {NAV_LINKS.map((navItem: any, idx: number) => (
+              {NAV_LINKS.map((navItem: NavItem, idx: number) => (
                 <AnimationContainer
                   key={`link=${idx}`}
                   animation="fadeRight"
